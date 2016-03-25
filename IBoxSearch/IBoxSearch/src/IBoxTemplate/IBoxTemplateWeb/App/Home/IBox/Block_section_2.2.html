@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h2 class="heading">Standard text and formatting</h2>
+    <div id="sectionSection0" class="section" name="collapseableSection" style="">
+        <p>Follow all authoring guidelines described in <span sdata="link"><a href="8418447e-77fc-4074-b94c-0b4bbe6df41b.aspx">General Authoring Guidelines</a></span>.</p>
+        <h3 class="subHeading">Field specifications</h3>
+        <div class="subsection">
+            <p>For each field, create a separate paragraph and specify field details in the following format:</p>
+            <blockquote><b>Field name (field length):</b> Description of field.</blockquote>
+            <p>For example:</p>
+            <blockquote><b>Field Name 1 (2 bytes):</b> The number of widgets that the sender has.</blockquote>
+            <p>In the field description, specify:</p>
+            <ul>
+                <li>
+                    <p>Meaning of the field</p>
+                </li>
+                <li>
+                    <p>Size of the field, if it is unclear from a corresponding diagram, as might be the case for a variable-size field</p>
+                </li>
+                <li>
+                    <p>Legal values when sending</p>
+                </li>
+                <li>
+                    <p>Dependencies on other fields</p>
+                </li>
+                <li>
+                    <p>Treatment of illegal values that are received; for example, "ignored" or "treated as an error, as specified in section <u>3.1.4</u>."</p>
+                </li>
+            </ul>
+            <p>Begin the definition of a field with an article ("A" or "An" or "The") and define the field by using either phrases or complete sentences; for example, "An integer that uniquely identifies a MetadataObject in a metadata store." Brief phrases are preferred.</p>
+            <p>Field specifications should adhere to the following additional standards:</p>
+            <ul>
+                <li>
+                    <p>If a field is "reserved" or "unused" state whether it MUST be zero when sending and state whether it MUST be ignored by the receiver or treated as an error if it is not zero; for example, "MUST be set to 0 when sending and ignored on receipt." Do not simply state that it is "reserved" or "unused." It is important to be specific.</p>
+                </li>
+                <li>
+                    <p>For a numerical field, specify the byte order. If the byte order is always little-endian or big-endian, use a single statement beneath the section heading, instead of repeating this information for each field.</p>
+                </li>
+                <li>
+                    <p>For an encrypted data field, describe the encryption algorithm that is used and how the keys are established. If key establishment occurs in the protocol, refer and link to the appropriate section of the specification for details.</p>
+                </li>
+                <li>
+                    <p>For a string field, specify</p>
+                    <ul>
+                        <li>
+                            <p>How the strings are handled in an international context, if at all; for example, Unicode, UTF8, or PUNYCODE encoded</p>
+                        </li>
+                        <li>
+                            <p>If the strings are parsed by the protocol</p>
+                        </li>
+                        <li>
+                            <p>Whether the strings are case sensitive</p>
+                        </li>
+                        <li>
+                            <p>Whether the field uses a syntax that is defined in a normative reference, and what that syntax is. If a normative reference does not apply, document the syntax by using ABNF as specified in <a href="http://www.rfc-editor.org/rfc/rfc5234.txt">RFC 5234</a>. (A syntax checker is available <a href="http://tools.ietf.org/inventory/all-tools">here</a>). Briefly, rules are separated from definitions by an equal sign (=). Indentation is used to continue a rule definition across more than one line. Literals are quoted with double quotation marks (""). Alternatives are designated with slashes (/). Elements are grouped in parentheses. Optional elements are enclosed in brackets ([ ]). Elements can be preceded with &lt;n&gt;* to designate n or more repetitions of the element; n defaults to 0. For example: </p>
+                            <p>reserved  = ";" / "/" / "?" / ":" / "@" / "&amp;" / "=" / "+" / "$" / ","</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>If a field follows a variable-length field and it is allowed to be unaligned, indicate as much by showing the field at an odd offset; for example, do not show it on a 4-byte or 2-byte boundary from the beginning of the message.</p>
+                </li>
+                <li>
+                    <p>For a packet format that matches bits on the wire, use the following table format.</p>
+                    <img alt="22MessageSyntax-Packets" src="../media/IBox_.gif" />
+                    <p>The preceding example illustrates bit numbers for three example fields.</p>
+                    <p>Note that the bit-numbering convention is the same as that used in RFCs; the bits are shown from left-to-right in the order which they appear over the network. The high bit of the first byte to hit the wire is in column 0. The low bit of the last byte to hit the wire is in column 31.</p>
+                    <p>For example, the following table shows the correct correspondence between column number and value on a little-endian system that uses a 32-bit field:</p>
+                    <img alt="22MessageSyntax-Little-Endian" src="../media/IBox_22MessageSyntax-Little-Endian.gif" />
+                    <p>In a diagram, field names are subject to the following standards:</p>
+                    <ul>
+                        <li>
+                            <p>Do not include parentheses, square brackets, or curly braces</p>
+                        </li>
+                        <li>
+                            <p>If a field is optional, append "(optional)" to the field name</p>
+                        </li>
+                        <li>
+                            <p>If a field is of variable size, append "(variable)" to the field name</p>
+                        </li>
+                        <li>
+                            <p>If a field continues on the next line, add the field name to the first line, and then add "..." to a continuation row that follows</p>
+                        </li>
+                        <li>
+                            <p>If a fixed-width field is more than 12 bytes (3 rows), denote the length by appending the actual length in parentheses to the field name, instead of providing many continuation rows ("…"); for example, "Name (128 bytes)." In this context, the diagram should show the field as a single block with a height of at least 3 rows, instead of a field that contains a set of rows.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>For a flags field, if the flags can be assigned one-letter labels, and the specification does not extend a base specification that defines the same flags in a multi-bit field, specify the flags in place in the tabular packet format as 1-bit wide fields.</p>
+                    <p>If the flags cannot reasonably be assigned one-letter labels, for example more than 26 flags are used, show the flags field as a multi-bit field in the tabular packet format and, in the field description, provide another table that shows the internal formatting of the flags field. Use the same style as for the larger packet, again with 1-bit wide fields.</p>
+                </li>
+            </ul>
+        </div>
+        <h3 class="subHeading">Other programming elements</h3>
+        <div class="subsection">
+            <p>Depending on the protocol or technology being documented, the Message Syntax section should contain descriptions of messages, elements, attributes, parameters, data types, and so forth. When describing programming elements, follow the "Programming Elements Description Guidelines" in the <a href="http://protoserver/standards_guide/">Windows Interoperability Standards Guide</a> and the formatting guidelines in the <span sdata="link"><a href="b312f5e3-3fc7-4e44-9ba7-bc46d4ea3acb.aspx">Programming Element Formatting Guidelines</a></span>.</p>
+        </div>
+        <h3 class="subHeading">Code examples</h3>
+        <div class="subsection">
+            <p>To specify implementation details for a message, it may be necessary to provide one or more code examples. If you are only describing behavior, use pseudocode instead of a code example. When providing code examples, apply the following standards:</p>
+            <ul>
+                <li>
+                    <p>Don't introduce code as "code" or a "code example" and avoid using the phrase "For example;" instead, use phrases such as "The syntax of this header is defined as follows…"</p>
+                </li>
+                <li>
+                    <p>Set code examples on a new line, even if they consist of only one line</p>
+                </li>
+                <li>
+                    <p>Use 4 spaces, not tabs, for indentations in code</p>
+                </li>
+                <li>
+                    <p>Use a blank line before a comment and do not add a blank line after a comment; the comment should be followed immediately by the code to which it applies</p>
+                </li>
+                <li>
+                    <p>Use sentences or phrases for comments, as follows:</p>
+                    <ul>
+                        <li>
+                            <p>Append a period to comments that are complete sentences; do not use any closing punctuation in phrases</p>
+                        </li>
+                        <li>
+                            <p>When describing the action of related code, use a complete, present-tense sentence</p>
+                        </li>
+                        <li>
+                            <p>Do not capitalize any words unless they are proper nouns</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Where appropriate, use a delimiter for comments and use only one space between the delimiter and the comment</p>
+                </li>
+            </ul>
+        </div>
+        <h3 class="subHeading">XML schema definitions</h3>
+        <div class="subsection">
+            <p>Provide the following information for each XML schema definition that appears in this section:</p>
+            <ul>
+                <li>
+                    <p>Describe the definition, including its purpose</p>
+                </li>
+                <li>
+                    <p>Insert an XML schema snippet that corresponds to the definition</p>
+                </li>
+                <li>
+                    <p>Document the XML schema snippet as follows:</p>
+                    <ul>
+                        <li>
+                            <p>If the XML snippet is a <i>simpleType</i> that is not an enumeration, define the allowable values for the type</p>
+                        </li>
+                        <li>
+                            <p>If the XML snippet is a <i>simpleType</i> that is an enumeration, add a table that lists the meaning of each enumerated value, as follows:</p>
+                            <div class="tableSection">
+                                <table width="50%" cellspacing="2" cellpadding="5" frame="lhs">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <p>Value</p>
+                                            </th>
+                                            <th>
+                                                <p>Meaning</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p>&lt;Insert value&gt;</p>
+                                            </td>
+                                            <td>
+                                                <p>&lt;Insert description&gt;</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>If the XML element is a <i>complexType</i> or an element definition that is a <i>complexType</i>, document each element and attribute that appears within the <i>complexType</i>. The path to the element/attribute should appear in bold, followed by a colon, a space, and a description of the element/attribute.</p>
+                    <p />
+                    <p>The path to the element/attribute identifies its location within the complexType definition. The path is formed by building a list of element names in a top-down manner and then appending the name of the attribute/element name that is being described. Separate each name in the path with a period (.).</p>
+                    <p />
+                    <p>&lt;Insert path&gt;: &lt;Insert Description&gt;</p>
+                    <p />
+                    <p>For example, for the following schema:</p>
+                    <div class="code">
+                        <span codelanguage="other">
+                            <table width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th><span class="copyCode" onclick="CopyCode(this)" onkeypress="CopyCode_CheckKey(this, event)" onmouseover="ChangeCopyCodeIcon(this)" onmouseout="ChangeCopyCodeIcon(this)" tabindex="0"><img class="copyCodeImage" name="ccImage" align="absmiddle" alt="Copy image" title="Copy image" src="../icons/copycode.gif" />Copy code</span></th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <pre>&lt;xs:element name='a'&gt;
+ &lt;xs:complexType&gt;
+  &lt;xs:sequence&gt;
+   &lt;xs:element name='b' type='xs:int'/&gt;
+    &lt;xs:element name='c' &gt;
+     &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+       &lt;xs:element name='d' type='xs:int'/&gt;
+       &lt;/xs:sequence&gt;
+      &lt;/xs:complexType&gt;
+     &lt;/xs:element&gt;
+    &lt;/xs:sequence&gt;
+   &lt;xs:attribute name='e' type='xs:int'/&gt;
+  &lt;/xs:complexType&gt;
+&lt;/xs:element&gt;</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </span>
+                    </div>
+                    <p />
+                    <p />
+                </li>
+            </ul>
+            <p>The following paths would be used:</p>
+            <p>b: &lt;Description&gt;</p>
+            <p>c: &lt;Description&gt;</p>
+            <p>c.d: &lt;Description&gt;</p>
+            <p>e: &lt;Description&gt;</p>
+            <p>For any unused or reserved fields, specify the constraints on the field, such as whether it must be zero, empty, or not present when sending, and whether it must be ignored by the receiver or treated as an error if it is not zero, not empty, or present.</p>
+        </div>
+    </div>
+    <h2 class="heading">Required elements</h2>
+    <div id="sectionSection1" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Use normative terms, as specified in <a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>; for example, MUST, SHOULD, and MAY</p>
+            </li>
+            <li>
+                <p>Use normative citations to specify all base types.</p>
+            </li>
+            <li>
+                <p>Describe every field in the message and indicate any constraints on the value of a field, such as a particular string format, or a value between 0 and 255.</p>
+            </li>
+            <li>
+                <p>If the protocol passes any type of handle across the wire, specify the details of the handle format or refer to a specification where it is defined.</p>
+            </li>
+            <li>
+                <p>Specify any packing or byte alignment issues. For example, is a 4-byte field guaranteed to be aligned on a 4-byte boundary? If data follows a field that is marked "(variable)," must the data be aligned on some boundary?</p>
+            </li>
+            <li>
+                <p>Provide the required information for each XML schema definition that appears in this section.</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Inappropriate elements</h2>
+    <div id="sectionSection3" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Lowercase versions of normative terms; for example, must, should, and may</p>
+            </li>
+            <li>
+                <p>Product names, unless those names are part of a protocol name</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Checklist</h2>
+    <div id="sectionSection5" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Specifies each distinct message type in its own subsection (2.2. <i>x</i>).</p>
+            </li>
+            <li>
+                <p>Specifies and describes all fields accurately and according to the standards listed above.</p>
+            </li>
+            <li>
+                <p>Any ABNF code passes the <a href="http://tools.ietf.org/inventory/all-tools">ABNF parsing Web service</a>.</p>
+            </li>
+            <li>
+                <p>Any pseudocode conforms to the <a href="http://users.csc.calpoly.edu/~jdalbey/SWE/pdl_std.html">California Polytechnic State University standard for pseudocode</a>.</p>
+            </li>
+            <li>
+                <p>Specifies bit fields in packet format as separate fields, not a single bit field.</p>
+            </li>
+            <li>
+                <p>Any time values, such as 00:00:00 on January 1, 1900, specify a time zone.</p>
+            </li>
+            <li>
+                <p>Explicitly states the behavior of "reserved" or "unused;" for example, "MUST be set to 0 and ignored on receipt."</p>
+            </li>
+            <li>
+                <p>Uses hexadecimal values for fixed-width integer values.</p>
+            </li>
+            <li>
+                <p>Descriptions of fields that contain bit flags specify whether all combinations are allowed or whether some are mutually exclusive.</p>
+            </li>
+            <li>
+                <p>All base types in the syntax use and cite normative references.</p>
+            </li>
+            <li>
+                <p>The size of each piece of data in a packet diagram matches what's specified in the text below the diagram; if a piece of data is specified as 8 bits in the text, it's spaced as 8 bits in the packet diagram.</p>
+            </li>
+            <li>
+                <p>The encoding is indicated for all string fields.</p>
+            </li>
+            <li>
+                <p>Each XML schema definition in the section is documented according to the prescribed formatting.</p>
+            </li>
+            <li>
+                <p>All applicable product behavior notes are present. If present, they are explained in the Product Behavior appendix.</p>
+            </li>
+            <li>
+                <p>Presents product behavior notes in the correct format &lt;#&gt; and links to the correct note in the Product Behavior appendix.</p>
+            </li>
+            <li>
+                <p>Follows appropriate guidelines for describing programming elements, as specified in the "Programming Elements Description Guidelines" section of the <a href="http://protoserver/standards_guide/">Windows Interoperability Standards Guide</a>.</p>
+            </li>
+            <li>
+                <p>Explains behavior by using pseudocode or code examples.</p>
+            </li>
+            <li>
+                <p>Follows appropriate guidelines for describing programming elements described in the <span sdata="link"><a href="b312f5e3-3fc7-4e44-9ba7-bc46d4ea3acb.aspx">Programming Element Formatting Guidelines</a></span></p>
+            </li>
+            <li>
+                <p>Normative terms, as specified in <a href="http://go.microsoft.com/fwlink/?LinkId=90317">RFC 2119</a>, are used and capitalized correctly.</p>
+            </li>
+            <li>
+                <p>Does not use the lowercase versions of normative terms.</p>
+            </li>
+            <li>
+                <p>Any tables are formatted correctly.</p>
+            </li>
+            <li>
+                <p>Footnotes are only used if you are not authoring in GenDox; any footnote text appears immediately after the table and clearly indicates which information it applies to.</p>
+            </li>
+            <li>
+                <p>Does not use the technical document short name ([MS-<i>xxxx</i>]) to refer to the protocol</p>
+            </li>
+            <li>
+                <p>Normative and informative citations cite only approved references.</p>
+            </li>
+            <li>
+                <p>Uses the correct product name in references to specific products.</p>
+            </li>
+            <li>
+                <p>Includes accurate and illustrative diagrams, figures, or other art as necessary.</p>
+            </li>
+            <li>
+                <p>Provides a figure number and caption for each diagram, figure, or graphic.</p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

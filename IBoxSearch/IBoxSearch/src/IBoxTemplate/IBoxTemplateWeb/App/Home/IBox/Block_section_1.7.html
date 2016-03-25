@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h2 class="heading">Standard text and formatting</h2>
+    <div id="sectionSection0" class="section" name="collapseableSection" style="">
+        <p>Follow all authoring guidelines described in <span sdata="link"><a href="8418447e-77fc-4074-b94c-0b4bbe6df41b.aspx">General Authoring Guidelines</a></span>.</p>
+        <p>If there are neither versioning aspects of the protocol nor relevant information about capability negotiation, per the information below, do not delete this section. Instead, ensure that the first and only sentence in this section is "None."</p>
+        <h3 class="subHeading">Version information</h3>
+        <div class="subsection">
+            <p>The first part of this section should be a bulleted list of items with references and links to sections where versioning aspects of the protocol are specified in detail. Present list items in the following order:</p>
+            <ul>
+                <li>
+                    <p><b>Supported Transports</b> - Does an aspect of the protocol go over SMB, raw IP, or something else?</p>
+                </li>
+                <li>
+                    <p><b>Protocol Versions</b> - Where does the protocol send version information?</p>
+                </li>
+                <li>
+                    <p><b>Security and Authentication Methods</b> - Which authentication protocols are supported? Where does the specification provide those details?</p>
+                </li>
+                <li>
+                    <p><b>Localization</b> - What happens if the protocol returns localized strings in a request or a response, such as an error string or user data? If the data is to be stored or displayed without context or negotiation of locale, the protocol has no localization-dependent behaviors. Otherwise, identify the localization-dependent behavior. An example is a response that specifies a locale identifier as the locale to which the message applies.</p>
+                </li>
+                <li>
+                    <p><b>Capability Negotiation</b> - Are there version dependencies? Are there cases where different products, product versions, or implementations within the same product demonstrate significantly different behavior?</p>
+                </li>
+            </ul>
+            <p>If a specific item in the list does not apply to the protocol, omit it from the list but maintain the order above for any other items that do apply.</p>
+            <p>If the list contains more than one item, introduce it with the following sentence.</p>
+            <blockquote>This specification covers versioning issues in the following areas:</blockquote>
+            <p>If the list contains only one item, do not format it as a list. Instead, format it as a stand-alone paragraph with the appropriate information and a link to the relevant section in the specification.</p>
+            <p>
+                <span class="ExchangeOnly">
+                    <b>Exchange:</b> For Exchange Web Services SOAP protocols, if the protocol uses a date/time format, or if the MailboxCulture element is used to specify the culture of the mailbox, include this information in the Localization section.
+            </p>
+            <p>Use the following text for the Security and Authentication Methods section:</p><blockquote>This protocol relies on the web server that is hosting it to perform authentication.</blockquote><p>In the Capability Negotiation section, provide information about how to get the target server version to determine which operations can be used, and which service endpoint to use.</span></p>
+        </div>
+    </div>
+    <h2 class="heading">Required elements</h2>
+    <div id="sectionSection1" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Summarize version and capability negotiation.</p>
+            </li>
+            <li>
+                <p>Provide an overview of negotiation issues, facilities, and handling.</p>
+            </li>
+            <li>
+                <p>Present all versioning aspects of the protocol in a list that conforms to the sequence identified above.</p>
+            </li>
+            <li>
+                <p>Link to all relevant sections and subsections.</p>
+            </li>
+            <li>
+                <p>If the list of versioning aspects contains more than one item, introduce it with "This specification covers versioning issues in the following areas:"</p>
+            </li>
+            <li>
+                <p>If the list of versioning aspects contains only one item, format the text as a stand-alone paragraph with the appropriate information; do not create a bulleted list with only one item.</p>
+            </li>
+            <li>
+                <p>For block and REST protocols, list any objects and packet exchanges that are involved in a negotiation.</p>
+            </li>
+            <li>
+                <p>For SOAP-based protocols, identify cases where a specific XML element or attribute is not available in every version of Microsoft products that implement the protocol.</p>
+            </li>
+            <li>
+                <p>For SOAP-based protocols, identify cases where the interpretation of specific XML schemas has changed.</p>
+            </li>
+            <li>
+                <p>For RPC-based protocols, adhere to the additional standards and guidelines as described above.</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Inappropriate elements</h2>
+    <div id="sectionSection3" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Normative terms, as specified in <a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>; for example, MUST, SHOULD, and MAY</p>
+            </li>
+            <li>
+                <p>Lowercase versions of normative terms; for example, must, should, and may</p>
+            </li>
+            <li>
+                <p>Normative citations</p>
+            </li>
+            <li>
+                <p>Product behavior notes</p>
+            </li>
+            <li>
+                <p>Footnotes</p>
+            </li>
+            <li>
+                <p>Diagrams, figures, or other art</p>
+            </li>
+            <li>
+                <p>Tables</p>
+            </li>
+            <li>
+                <p>Code examples</p>
+            </li>
+            <li>
+                <p>Pseudocode</p>
+            </li>
+            <li>
+                <p>Product names, unless those names are part of a protocol name</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Checklist</h2>
+    <div id="sectionSection5" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>If versioning aspects and capability negotiation information does not apply to the protocol, the first and only paragraph in this section is "None."</p>
+            </li>
+            <li>
+                <p>References version and capability details in subsequent sections, instead of providing them in this section</p>
+            </li>
+            <li>
+                <p>Introduces the list of version information with the sentence "This document covers versioning issues in the following areas:"</p>
+            </li>
+            <li>
+                <p>Presents all versioning aspects of the protocol in a list that conforms to the sequence identified above</p>
+            </li>
+            <li>
+                <p>Lists contain at least two items; otherwise, the information is presented as a stand-alone paragraph, not a list</p>
+            </li>
+            <li>
+                <p />
+            </li>
+            <li>
+                <p>Does not use normative terms, as specified in <a href="http://go.microsoft.com/fwlink/?LinkId=90317">RFC 2119</a></p>
+            </li>
+            <li>
+                <p>Does not use the lowercase versions of normative terms</p>
+            </li>
+            <li>
+                <p>For block protocols, lists any objects and packet exchanges</p>
+            </li>
+            <li>
+                <p>For SOAP-based protocols, identifies availability cases for specific XML elements or attributes that are not available in every version of Microsoft products that implement the protocol</p>
+            </li>
+            <li>
+                <p>For SOAP-based protocols, identifies changes to the interpretation of specific XML schemas</p>
+            </li>
+            <li>
+                <p>Does not use the technical document short name ([MS-xxxx]) to refer to the protocol</p>
+            </li>
+            <li>
+                <p>Uses informative citations sparingly</p>
+            </li>
+            <li>
+                <p>Does not contain normative citations</p>
+            </li>
+            <li>
+                <p>Does not contain pseudocode or code examples</p>
+            </li>
+            <li>
+                <p>Does not contain footnotes or product behavior notes</p>
+            </li>
+            <li>
+                <p>Does not contain diagrams, figures, or other art</p>
+            </li>
+            <li>
+                <p>Does not contain tables</p>
+            </li>
+            <li>
+                <p>Does not contain product names, unless those names are part of a protocol name</p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h2 class="heading">Standard text and formatting</h2>
+    <div id="sectionSection0" class="section" name="collapseableSection" style="">
+        <p>Follow all authoring guidelines described in <span sdata="link"><a href="8418447e-77fc-4074-b94c-0b4bbe6df41b.aspx">General Authoring Guidelines</a></span>. For additional information on standard text and formatting for this section, see the standards listed at the end of the Standard text and formatting for section <a href="http://technet.microsoft.com/library/For additional information on standard text and formatting for this section, see the standards listed at the end of the Standard text and formatting for section 2 Messages..aspx">2 Messages</a>.</p>
+        <p>If the protocol accesses or stores data in the Active Directory store, include section 2.3 (Directory Service Schema Elements) after section 2.2 (Common Message Syntax); otherwise, omit section 2.3.</p>
+        <blockquote>The protocol accesses the following Directory Service schema classes and attributes listed in the following table(s).</blockquote>
+        <blockquote>For the syntactic specifications of the following &lt;Class&gt; or &lt;Class&gt;&lt;Attribute&gt; pairs, refer to:</blockquote>
+        <blockquote>Active Directory Domain Services (AD DS) ([MS-ADA1],[MS-ADA2], [MS-ADA3], and [MS-ADSC]).</blockquote>
+        <blockquote>Or:</blockquote>
+        <blockquote>Active Directory Lightweight Directory Services (AD LDS) ([MS-ADLS]). <br /><br /><img alt="2_3_DirectoryServiceSchemaElements" src="../media/IBox_2_3_DirectoryServiceSchemaElements.gif" /></blockquote>
+        <p>Each class or class attribute pair that is cited in this section must be referenced at least once in section 3 of the specification. There are three potential cases as shown in the table above. Include one or more instances of the above table, according to the appropriate cases as described below:</p>
+        <ul>
+            <li>
+                <p>Case 1 - If the protocol accesses all of the non-inherited class attributes, there is no requirement to list them individually; "All" is sufficient.</p>
+            </li>
+            <li>
+                <p>Case 2 - If the protocol accesses all of the non-inherited class attributes, and select inherited attributes, list them after "All."</p>
+            </li>
+            <li>
+                <p>Case 3 - If the protocol accesses a proper subset of inherited and non-inherited class attributes, list each attribute individually, in LDAP display name (ldapDisplayName) order.</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Required elements</h2>
+    <div id="sectionSection1" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>If the protocol does not access or store data in an Active Directory store, delete this section, including the heading.</p>
+            </li>
+            <li>
+                <p>Begin with the standard text that introduces the section, the appropriate normative citations, and tables that list the classes and class attributes that are used by the protocol.</p>
+            </li>
+            <li>
+                <p>Ensure that every class or class attribute pair in this section is described in section 3 of the specification.</p>
+            </li>
+            <li>
+                <p>Use normative terms, as specified in <a href="http://go.microsoft.com/fwlink/?LinkId=90317">RFC 2119</a>; for example, MUST, SHOULD, and MAY.</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Inappropriate elements</h2>
+    <div id="sectionSection3" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Citations and links to ADA and ADLS normative references that do not apply to the protocol; revise the standard text to omit references that do not apply</p>
+            </li>
+            <li>
+                <p>Lowercase versions of normative terms; for example, must, should, and may</p>
+            </li>
+            <li>
+                <p>Diagrams, figures, or other art</p>
+            </li>
+            <li>
+                <p>Code examples</p>
+            </li>
+            <li>
+                <p>Pseudocode</p>
+            </li>
+            <li>
+                <p>Product names, unless those names are part of a protocol name</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Checklist</h2>
+    <div id="sectionSection5" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>If the protocol does not access or store data in an Active Directory store, this section, including the heading, is omitted from the specification.</p>
+            </li>
+            <li>
+                <p>The first sentence in the section is "The protocol accesses the following Directory Service schema classes and attributes listed in the following table(s)."</p>
+            </li>
+            <li>
+                <p>Includes the standard text for normative references and cites only those references that apply.</p>
+            </li>
+            <li>
+                <p>Lists, in a properly formatted table, all of the classes and class attributes that are used by the protocol.</p>
+            </li>
+            <li>
+                <p>Every class or class/attribute pair listed in this section is described in section 3 of the specification.</p>
+            </li>
+            <li>
+                <p>Normative terms, as specified in <a href="http://go.microsoft.com/fwlink/?LinkId=90317">RFC 2119</a>, are used and capitalized correctly.</p>
+            </li>
+            <li>
+                <p>Does not use the lowercase versions of normative terms.</p>
+            </li>
+            <li>
+                <p>Does not use the technical document short name ([MS-<i>xxxx</i>]) to refer to the protocol.</p>
+            </li>
+            <li>
+                <p>Normative and informative citations cite only approved references.</p>
+            </li>
+            <li>
+                <p>Presents product behavior notes in the correct format &lt;#&gt; and links to the correct note in the Product Behavior appendix.</p>
+            </li>
+            <li>
+                <p>Uses the correct product name in references to specific products.</p>
+            </li>
+            <li>
+                <p>Does not contain pseudocode or code examples.</p>
+            </li>
+            <li>
+                <p>Footnotes are only used if you are not authoring in GenDox; any footnote text appears immediately after the table and clearly indicates which information it applies to.</p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

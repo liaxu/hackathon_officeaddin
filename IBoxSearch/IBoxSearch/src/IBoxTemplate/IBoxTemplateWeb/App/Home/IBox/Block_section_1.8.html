@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h2 class="heading">Standard text and formatting</h2>
+    <div id="sectionSection0" class="section" name="collapseableSection" style="">
+        <p>Follow all authoring guidelines described in <span sdata="link"><a href="8418447e-77fc-4074-b94c-0b4bbe6df41b.aspx">General Authoring Guidelines</a></span>.</p>
+        <p>If there are no vendor-extensible fields for the protocol, do not delete this section. Instead, ensure that the first and only sentence in this section is "None." Typically, there are no vendor-extensible fields for stored procedures (sprocs).</p>
+        <p>If the protocol returns HRESULTs, include the following text:</p>
+        <blockquote>This protocol uses HRESULT values as defined in [MS-ERREF] section 2.1. Vendors can define their own HRESULT values, provided that they set the C bit (0x20000000) for each vendor-defined value, indicating the value is a customer code.</blockquote>
+        <p>If the protocol returns Win32 error codes, include the following text:</p>
+        <blockquote>This protocol uses Win32 error codes as defined in [MS-ERREF] section 2.2. Vendors SHOULD reuse those values with their indicated meaning. Choosing any other value runs the risk of a collision in the future.</blockquote>
+        <p>If the protocol returns NTSTATUS values, include the following text:</p>
+        <blockquote>This protocol uses NTSTATUS values as defined in [MS-ERREF] section 2.3. Vendors can choose their own values for this field, as long as the C bit (0x20000000) is set, indicating it is a customer code.</blockquote>
+        <p><span class="ExchangeOnly">Exchange Server technical documents do not reference section numbers in Microsoft Open Specifications technical documents that are not part of the Exchange Server Open Specifications documentation set.</span></p>
+    </div>
+    <h2 class="heading">Required elements</h2>
+    <div id="sectionSection1" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>If there are no vendor-extensible fields for the protocol, the first and only paragraph in this section is "None."</p>
+            </li>
+            <li>
+                <p>If a field is a string field, state whether it is a UNICODE or ASCII field.</p>
+            </li>
+            <li>
+                <p>If a field is reserved or unused, state the required setting of the reserved, unused, or padding field; for example, "MUST be set to zero when sending and ignored when receiving."</p>
+            </li>
+            <li>
+                <p>If the protocol returns HRESULTs, Win32 error codes, or NTSTATUS values, use the correct standard text to indicate as much.</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Inappropriate elements</h2>
+    <div id="sectionSection3" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Error codes that affect the behavior of or change the state of a protocol; instead, document these error codes later in the specification</p>
+            </li>
+            <li>
+                <p>Error codes that can be returned by a Microsoft API that is both available to third parties and documented publicly by Microsoft, on MSDN or an equivalent public location; instead, document these error codes in the product behavior appendix</p>
+            </li>
+            <li>
+                <p>Error values that are handled specially by Microsoft applications or components of a Microsoft product or technology; instead, document the handling in an error code list in an appendix</p>
+            </li>
+            <li>
+                <p>Lowercase versions of normative terms; for example, must, should, and may</p>
+            </li>
+            <li>
+                <p>Footnotes</p>
+            </li>
+            <li>
+                <p>Code examples</p>
+            </li>
+            <li>
+                <p>Product names, unless those names are part of a protocol name</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Checklist</h2>
+    <div id="sectionSection5" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>If there are no vendor-extensible fields for the protocol, the first and only paragraph in this section is "None."</p>
+            </li>
+            <li>
+                <p>Specifies all vendor-extensible fields.</p>
+            </li>
+            <li>
+                <p>Explains the process for acquiring values for all vendor-extensible fields.</p>
+            </li>
+            <li>
+                <p>Uses the correct standard text for cases in which the protocol returns HRESULTs, Win32 error codes, or NTSTATUS values.</p>
+            </li>
+            <li>
+                <p>Discusses any off-box uniqueness constraints.</p>
+            </li>
+            <li>
+                <p>Normative terms, as specified in <a href="http://go.microsoft.com/fwlink/?LinkId=90317">RFC 2119</a>, are used and capitalized correctly.</p>
+            </li>
+            <li>
+                <p>Does not use the lowercase versions of normative terms.</p>
+            </li>
+            <li>
+                <p>Does not use the technical document short name ([MS-<i>xxxx</i>]) to refer to the protocol.</p>
+            </li>
+            <li>
+                <p>Normative citations cite only approved normative references.</p>
+            </li>
+            <li>
+                <p>Presents product behavior notes in the correct format &lt;#&gt; and links to the correct note in the Product Behavior appendix.</p>
+            </li>
+            <li>
+                <p>Uses the correct product name in references to specific products.</p>
+            </li>
+            <li>
+                <p>Includes accurate and illustrative diagrams, figures, or other art as necessary</p>
+            </li>
+            <li>
+                <p>Provides a figure number and caption for each diagram, figure, or graphic; for example, "Figure 1: This protocol in relation to other protocols"</p>
+            </li>
+            <li>
+                <p>Does not contain pseudocode or code examples.</p>
+            </li>
+            <li>
+                <p>Does not contain tables.</p>
+            </li>
+            <li>
+                <p>Does not contain footnotes.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

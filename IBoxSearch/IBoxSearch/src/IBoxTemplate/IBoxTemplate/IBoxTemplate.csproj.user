@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SharePointSiteUrl>https://msinov.sharepoint.com/</SharePointSiteUrl>
+    <GeneratedFeatureId>357b8523-8565-49b2-b634-8786f59c9cea</GeneratedFeatureId>
+    <GeneratedPackageId>cb14f5e9-9856-4e67-b3ca-ddc55e436e97</GeneratedPackageId>
+    <GeneratedModuleId>{cd96f8f9-04fd-48af-a165-062bc5191566}</GeneratedModuleId>
+    <GeneratedListId>{65ac85a3-ec50-429f-bf9d-b4339de61008}</GeneratedListId>
+    <GeneratedProductId>{df4b0990-79d3-466e-8f81-5f92ba82b4b2}</GeneratedProductId>
+    <GeneratedAppVersion>1.0.0.0</GeneratedAppVersion>
+    <GeneratedClientSecret>dqyE1hFpYXgrBa2FkS12DKjwSRUM5ZrblPzUxkRcTq8=</GeneratedClientSecret>
+    <OfficeAppStartDocument>&lt;NewWordDocument&gt;</OfficeAppStartDocument>
+  </PropertyGroup>
+</Project>

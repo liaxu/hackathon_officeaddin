@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h2 class="heading">Standard text and formatting</h2>
+    <div id="sectionSection0" class="section" name="collapseableSection" style="">
+        <p>Follow all authoring guidelines described in <span sdata="link"><a href="8418447e-77fc-4074-b94c-0b4bbe6df41b.aspx">General Authoring Guidelines</a></span>.</p>
+        <ul>
+            <li>
+                <p>If no states are required for the protocol or algorithm to work, do not delete this section. Instead, ensure that the first and only sentence in this section is "None."</p>
+            </li>
+            <li>
+                <p>If any states are required for the protocol or algorithm to work, the first paragraph of this section should be:</p>
+                <p>This section describes a conceptual model of possible data organization that an implementation maintains to participate in this &lt;protocol/algorithm&gt;. The described organization is provided to facilitate the explanation of how the &lt;protocol/algorithm&gt; behaves. This specification does not mandate that implementations adhere to this model as long as their external behavior is consistent with that described in this specification.</p>
+            </li>
+            <li>
+                <p>If applicable, the section should then list the required states in the following format:</p>
+                <p><b>state name:</b> A/An/The + &lt;brief description that forms a complete sentence&gt;.</p>
+            </li>
+            <li>
+                <p>For example:</p>
+                <p><b>Base URL:</b> The portion of the <b>Request-URI</b> that matches the base rule in the ABNF, as specified in section <u>2.2.1.3.1</u>.</p>
+                <p><b>Query Parameters:</b> The parameters in the query component of the <b>Request-URI</b>, as specified in section <u>2.2.1.3.2</u> and its subsections.</p>
+            </li>
+            <li>
+                <p>If another protocol or algorithm directly sets or gets the value of abstract data model (ADM) elements, include the following statement and include "(Public)" after the name of the ADM element. Otherwise, omit the statement.</p>
+                <p>Note that the abstract interface notation '(Public)' indicates that the abstract data model element can be directly accessed from outside this &lt;protocol/algorithm&gt;.</p>
+            </li>
+            <li>
+                <p>If the protocol or algorithm directly sets or gets the value of ADM elements of another protocol or algorithm, that is, (Public) elements of another protocol or algorithm, call out the references explicitly. For example:</p>
+                <p>This protocol includes the following ADM elements, which are directly accessed from &lt;protocol name&gt; as specified in [MS-ABCD] section 3.1.1:</p>
+                <p><b>CurrentCounter</b></p>
+                <p><b>MaxCounter</b></p>
+                <p>The following elements are specific to this protocol:</p>
+                <p><b>Base URL:</b> The portion of the Request-URI that matches the base rule, as specified in section 2.2.1.3.1.</p>
+                <p><b>Query parameters:</b> The parameters in the query component of the Request-URI, as specified in section 2.2.1.3.2.</p>
+                <p>Use the same element name that is used in the referenced technical document. If you cannot use the same name, you must provide a mapping between the names.</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Required elements</h2>
+    <div id="sectionSection1" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Include the standard text above as the first paragraph if any states are required for the protocol or algorithm to work.</p>
+            </li>
+            <li>
+                <p>Provide a conceptual description of any states, except timers, that must be present in some form for the protocol or algorithm to work.</p>
+            </li>
+            <li>
+                <p>List all of the states that are identified as required in behavior specifications for the protocol or algorithm.</p>
+            </li>
+            <li>
+                <p>Ensure that all of the states that are specified in this section are also mentioned elsewhere in the specification when specifying the behavior of the protocol or algorithm.</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Inappropriate elements</h2>
+    <div id="sectionSection3" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Prescriptive implementation details</p>
+            </li>
+            <li>
+                <p>Information about states that are not relevant to the current section 2.x or 3.x</p>
+            </li>
+            <li>
+                <p>Information about message-specific structures and structure definitions</p>
+            </li>
+            <li>
+                <p>Descriptions of specific classes that are used</p>
+            </li>
+            <li>
+                <p>Lowercase versions of normative terms; for example, must, should, and may</p>
+            </li>
+            <li>
+                <p>Code examples</p>
+            </li>
+            <li>
+                <p>Pseudocode</p>
+            </li>
+            <li>
+                <p>Product names, unless those names are part of the name of a protocol or format</p>
+            </li>
+        </ul>
+    </div>
+
+    <h2 class="heading">Checklist</h2>
+    <div id="sectionSection5" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>If no states are required for the protocol or algorithm to work, the first and only sentence in this section is "None."</p>
+            </li>
+            <li>
+                <p>If any states are required for the protocol or algorithm to work, the first paragraph is the standard statement indicating that the information is conceptual.</p>
+            </li>
+            <li>
+                <p>Describes any states, except timers, that must be present in some form for the protocol or algorithm to work.</p>
+            </li>
+            <li>
+                <p>State descriptions are formatted as <b>state name:</b> A/An/The + &lt;brief description that forms a complete sentence&gt;.</p>
+            </li>
+            <li>
+                <p>Does not provide implementation-specific details.</p>
+            </li>
+            <li>
+                <p>All of the states that are included in this section are specified elsewhere in the specification, and all of the states included in behavior specifications elsewhere are mentioned in this section.</p>
+            </li>
+            <li>
+                <p>Describes only those states that are required and are specified in subsections of the same section 2. <i>x</i> or 3. <i>x</i>.</p>
+            </li>
+            <li>
+                <p>Does not define structures or provide information about message-specific structures.</p>
+            </li>
+            <li>
+                <p>Normative terms, as specified in <a href="http://go.microsoft.com/fwlink/?LinkId=90317">RFC 2119</a>, are used and capitalized correctly.</p>
+            </li>
+            <li>
+                <p>Does not use the lowercase versions of normative terms.</p>
+            </li>
+            <li>
+                <p>Does not use the technical document short name ([MS-<i>xxxx</i>]) to refer to the protocol or algorithm.</p>
+            </li>
+            <li>
+                <p>Normative and informative citations cite only approved references.</p>
+            </li>
+            <li>
+                <p>Presents product behavior notes in the correct format &lt;#&gt; and links to the correct note in the Product Behavior appendix.</p>
+            </li>
+            <li>
+                <p>Includes accurate and illustrative diagrams, figures, or other art as necessary.</p>
+            </li>
+            <li>
+                <p>Provides a figure number and caption for each diagram, figure, or graphic.</p>
+            </li>
+            <li>
+                <p>Does not contain pseudocode or code examples.</p>
+            </li>
+            <li>
+                <p>Footnotes are only used if you are not authoring in GenDox; any footnote text appears immediately after the table and clearly indicates which information it applies to.</p>
+            </li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

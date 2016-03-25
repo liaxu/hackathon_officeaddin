@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h2 class="heading">Standard text and formatting</h2>
+    <div id="sectionSection0" class="section" name="collapseableSection" style="">
+        <p>Follow all authoring guidelines described in <span sdata="link"><a href="8418447e-77fc-4074-b94c-0b4bbe6df41b.aspx">General Authoring Guidelines</a></span>.</p>
+        <p>Include this section only as applicable for a block protocol; if a particular role does not apply for the protocol, do not include a section for that role.</p>
+        <p>If there are no client or server roles to specify for a sproc protocol, the first and only paragraph in the corresponding section should be "None."</p>
+        <p>If the protocol can be described more easily by using a state machine diagram, provide such a diagram in this section. The diagram should use a subset of the UML 2 state machine diagram format, which is available in Visio 2003 and later. It is recommended that you omit from the diagram any actions and activities that occur within the protocol. Such actions and activities are typically complex and can best be specified in the text of subsections 3.1.x, where they additionally serve as a definitive reference for protocol behavior.</p>
+        <p>In the diagram, use a rectangle with rounded corners to represent a state.</p>
+        <img alt="3_x_Connecting" src="../media/IBox_3_x_Connecting.jpg" />
+        <p />
+        <p>To represent the initial pseudo-state, use a black solid circle.</p>
+        <img alt="3_x_InitialState" src="../media/IBox_3_x_InitialState.jpg" />
+        <p />
+        <p>To represent the final pseudo-state, use a black solid circle enclosed in another circle.</p>
+        <img alt="3_x_FinalState" src="../media/IBox_3_x_FinalState.jpg" />
+        <p />
+        <p>To represent transitions between states, use a directed arc. In the arc label, specify the trigger and, if applicable, a condition enclosed in square brackets.</p>
+        <img alt="3_x_MessageReceived" src="../media/IBox_3_x_MessageReceived.jpg" />
+        <p />
+    </div>
+    <h2 class="heading">Required elements</h2>
+    <div id="sectionSection1" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Include information about events that are surfaced from other protocols and cause the protocol to take some action, such as a connection failure in the underlying protocol which is signaled to this protocol as an error.</p>
+            </li>
+            <li>
+                <p>If the protocol is a sproc protocol, provide a Server Details section and a Client Details section.</p>
+            </li>
+            <li>
+                <p>If the protocol is a sproc protocol and it does not have a client or a server interface to specify, ensure that the first and only paragraph in the corresponding section is "None."</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Inappropriate elements</h2>
+    <div id="sectionSection3" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>Product names, unless those names are part of a protocol name</p>
+            </li>
+            <li>
+                <p>Code examples</p>
+            </li>
+            <li>
+                <p>References to platform-specific APIs</p>
+            </li>
+            <li>
+                <p>Information about state transitions</p>
+            </li>
+            <li>
+                <p>Information about events that are internal to the underlying transport protocol</p>
+            </li>
+            <li>
+                <p>Lowercase versions of normative terms; for example, must, should, and may</p>
+            </li>
+        </ul>
+    </div>
+    <h2 class="heading">Checklist</h2>
+    <div id="sectionSection5" class="section" name="collapseableSection" style="">
+        <ul>
+            <li>
+                <p>If the protocol is a sproc protocol, contains a Server Details subsection and a Client Details subsection.</p>
+            </li>
+            <li>
+                <p>If the protocol is a sproc protocol and it does not have a client or a server interface to specify, the first and only paragraph in the corresponding section is "None."</p>
+            </li>
+            <li>
+                <p>Contains all required 3.x.x subsections.</p>
+            </li>
+            <li>
+                <p>Includes all relevant information about trigger events and protocol actions and activities.</p>
+            </li>
+            <li>
+                <p>Uses product behavior notes only where applicable to an implementation detail.</p>
+            </li>
+            <li>
+                <p>Normative terms, as specified in <a href="http://go.microsoft.com/fwlink/?LinkId=90317">RFC 2119</a>, are used and capitalized correctly.</p>
+            </li>
+            <li>
+                <p>Does not use the lowercase versions of normative terms.</p>
+            </li>
+            <li>
+                <p>Normative and informative citations cite only approved references.</p>
+            </li>
+            <li>
+                <p>Presents product behavior notes in the correct format &lt;#&gt; and links to the correct note in the Product Behavior appendix.</p>
+            </li>
+            <li>
+                <p>Includes accurate and illustrative diagrams, figures, or other art as necessary.</p>
+            </li>
+            <li>
+                <p>If a state diagram is provided, it conforms to the UML 2 state machine diagram format and uses the correct symbols.</p>
+            </li>
+            <li>
+                <p>Provides a figure number and caption for each diagram, figure, or graphic.</p>
+            </li>
+            <li>
+                <p>Any pseudocode conforms to the <a href="http://users.csc.calpoly.edu/~jdalbey/SWE/pdl_std.html">California Polytechnic State University standard for pseudocode</a>.</p>
+            </li>
+            <li>
+                <p>Does not use the technical document short name ([MS-xxxx]) to refer to the protocol.</p>
+            </li>
+            <li>
+                <p>Does not contain code examples.</p>
+            </li>
+            <li>
+                <p>Does not contain references to platform-specific APIs.</p>
+            </li>
+            <li>
+                <p>Does not describe state transitions.</p>
+            </li>
+            <li>
+                <p>Does not provide details about underlying transport protocols.</p>
+            </li>
+            <li>
+                <p>Footnotes are only used if you are not authoring in GenDox; any footnote text appears immediately after the table and clearly indicates which information it applies to.</p>
+            </li>
+            <li>
+                <p>Does not contain product names, unless those names are part of a protocol name.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
