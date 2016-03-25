@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SharePointSiteUrl>https://wicresoftnapa.sharepoint.com/</SharePointSiteUrl>
+    <GeneratedFeatureId>89b6e3bf-b038-4efb-8c78-3bc1d0c8180f</GeneratedFeatureId>
+    <GeneratedPackageId>b45120ae-ec85-41da-8941-876b30a7fde8</GeneratedPackageId>
+    <GeneratedModuleId>{dd2caf90-5635-4e44-a1b7-37d693283de5}</GeneratedModuleId>
+    <GeneratedListId>{fe9c29d1-1687-41a7-a2ed-db3c5ef4448d}</GeneratedListId>
+    <GeneratedProductId>{5c5cca7a-94a5-45d8-8559-61457d3abeb7}</GeneratedProductId>
+    <GeneratedAppVersion>1.0.0.0</GeneratedAppVersion>
+    <GeneratedClientSecret>z+43aNWgm5OW7iupsVMsiqJwDNRFYdQvmPbOgLzFGWo=</GeneratedClientSecret>
+  </PropertyGroup>
+</Project>

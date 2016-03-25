@@ -1,0 +1,7 @@
+False
+89b6e3bf-b038-4efb-8c78-3bc1d0c8180fb45120ae-ec85-41da-8941-876b30a7fde8
+{dd2caf90-5635-4e44-a1b7-37d693283de5}{fe9c29d1-1687-41a7-a2ed-db3c5ef4448d}
+{5c5cca7a-94a5-45d8-8559-61457d3abeb7}
+1.0.0.0
+ChineseVacationCalendar
+_layouts/15/

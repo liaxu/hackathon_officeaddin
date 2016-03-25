@@ -1,0 +1,2 @@
+bin\Debug\OfficeAppManifests\ChineseVacationCalendarManifest.xml
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\ChineseVacationCalendar.debugapp

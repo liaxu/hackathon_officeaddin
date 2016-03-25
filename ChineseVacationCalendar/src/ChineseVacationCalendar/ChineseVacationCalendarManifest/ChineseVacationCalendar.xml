@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ContentApp">
+  <Id>e9945c3a-063f-4dcd-a9b5-6b7d3097a658</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>[Provider name]</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="ChineseVacationCalendar" />
+  <Description DefaultValue="ChineseVacationCalendar"/>
+  <Hosts>
+    <Host Name="Workbook" />
+    <Host Name="Presentation" />
+    <Host Name="Database" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="~remoteAppUrl/AddIn/Home/Home.html" />
+    <RequestedWidth>550</RequestedWidth>
+    <RequestedHeight>550</RequestedHeight>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

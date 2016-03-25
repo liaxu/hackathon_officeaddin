@@ -1,0 +1,24 @@
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\csc.exe
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\System.Collections.Immutable.dll
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\System.Reflection.Metadata.dll
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\vbc.exe
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\VBCSCompiler.exe
+c:\users\v-huid.fareast\documents\visual studio 2015\Projects\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\VBCSCompiler.exe.config
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\csc.exe
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\System.Collections.Immutable.dll
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\System.Reflection.Metadata.dll
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\vbc.exe
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\VBCSCompiler.exe
+D:\Project\ChineseVacationCalendar\ChineseVacationCalendar\bin\Debug\roslyn\VBCSCompiler.exe.config
