@@ -1,0 +1,37 @@
+﻿body {
+   background-image: url(HeaderBackground.jpg);
+   background-size:contain;
+}
+h1 {
+    font-style:italic;
+    font-weight:bold;
+    font-size:200%;
+    color:#608dde;
+}
+
+select {
+width:120px;
+ background-image: url(selectBackground.jpg);
+ background-size:cover;
+}
+
+.btn-style{
+    border-style:none;
+    padding:8px 30px;
+    line-height:24px;
+    color:#fff;
+    font:13px "Microsoft YaHei", Verdana, Geneva, sans-serif;
+    cursor:pointer;
+    border:1px #ae7d0a solid;
+    box-shadow:inset 0 0 1px #fff;/*内发光效果*/
+    border-radius:4px;/*边框圆角*/
+    text-shadow:1px 1px 0 #b67f01;/*字体阴影效果*/
+    background-color:#49c2d0;
+    background-image: linear-gradient(to bottom, #49c2d0 #309955);/*颜色渐变效果*/
+}
+
+.dictionary {  
+  border:1px #7F9DB9 solid; 
+  float: left;  
+  display: inline;  
+  }  
